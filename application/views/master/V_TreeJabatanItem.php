@@ -12,16 +12,20 @@
 
                                 <tbody>
                                 <?php $no = 1; foreach($jabatan as $rs){ ?>
-                                <tr>
-                                    <td align="center"><?=$no++;?></td>
-                                    <td><?=$rs['nama_jabatan'];?></td>
-                                    <td><?=$rs['parent_jabatan'];?></td>
-                                    <td></td>
-                
-                                
-                            
-                                </tr>
-                            <?php } ?>
+                        <tr>
+                            <td class="text-center"><?=$no++?></td>
+                            <td colspan=2><?= print_r($rs['child'])?></td>
+                        </tr>
+                        <?php $no_sub = 1; foreach($rs['child'] as $sb){ ?>
+                            <tr>
+                                <td colspan=2></td>
+                                <td><?=$sb?></td>
+                            </tr>
+                        <?php } ?>
+                    <?php } ?>
+
+
+                               
                                 </tbody>
                                 </table>
 

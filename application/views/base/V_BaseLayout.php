@@ -37,6 +37,13 @@
     <link href="<?=base_url('')?>assets/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
     <link href="<?=base_url('')?>assets/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
 
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-treeview/1.2.0/bootstrap-treeview.min.css" />
+
+
+
   </head>
 
   <body class="nav-md">
@@ -115,6 +122,20 @@
     '<div class="spinner-grow text-success" style="width: 3rem; height: 3rem;" role="status"> <span class="sr-only">Loading...</span></div>'+
     '<div class="spinner-grow text-warning" style="width: 3rem; height: 3rem;" role="status"> <span class="sr-only">Loading...</span></div></div>'
   }
+
+  function successtoast(message = ''){
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top',
+      showConfirmButton: false,
+      timer: timertoast
+    });
+
+    Toast.fire({
+      icon: 'success',
+      title: message
+    })
+  }
 </script>
 
     <!-- jQuery -->
@@ -176,6 +197,9 @@
     <script src="<?=base_url('')?>assets/vendors/pdfmake/build/pdfmake.min.js"></script>
     <script src="<?=base_url('')?>assets/vendors/pdfmake/build/vfs_fonts.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-treeview/1.2.0/bootstrap-treeview.min.js"></script>
  
 	
   </body>
