@@ -8,10 +8,7 @@
                         <div class="title_right">
                             <div class="col-md-5 col-sm-5 form-group pull-right top_search">
                                 <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search for...">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-default" type="button">Go!</button>
-                                    </span>
+                                  
                                 </div>
                             </div>
                         </div>
@@ -26,15 +23,6 @@
                                     <ul class="nav navbar-right panel_toolbox">
                                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                         </li>
-                                        <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#">Settings 1</a>
-                                                <a class="dropdown-item" href="#">Settings 2</a>
-                                            </div>
-                                        </li>
-                                        <li><a class="close-link"><i class="fa fa-close"></i></a>
-                                        </li>
                                     </ul>
                                     <div class="clearfix">
                                    
@@ -42,7 +30,7 @@
                                 </div>
                                 <div id="">
                                 <form id="form_jabatan" class="" action="" method="post" novalidate>                                      
-                                        <span class="section">Personal Info</span>
+                                        <span class="section">--</span>
                                         <div class="field item form-group">
                                             <label class="col-form-label col-md-3 col-sm-3  label-align">Jabatan<span class="required"></span></label>
                                             <div class="col-md-6 col-sm-6">
@@ -61,11 +49,11 @@
                                             <label class="col-form-label col-md-3 col-sm-3  label-align">Parent Jabatan<span class="required"></span></label>
                                             <div class="col-md-6 col-sm-6">
                                                 <select class="form-control" class='optional' name="parent_id_jabatan" id="parent_id_jabatan"> 
-                                                <?php if($jabatan){
-                                                foreach($jabatan as $ls){
+                                                <?php if($parent_jabatan){
+                                                foreach($parent_jabatan as $ls){
                                                 ?>
-                                                <option value="<?=$ls['id_jabatanpeg']?>">
-                                                    <?=$ls['nama_jabatan']?>
+                                                <option value="<?=$ls['id_jabatan']?>','<?=$ls['parent_id_jabatan']?>">
+                                                    <?=$ls['Result']?>
                                                 </option>
                                                 <?php } } ?>
                                                 </select>
@@ -77,7 +65,7 @@
                                             <div class="form-group">
                                                 <div class="col-md-6 offset-md-3">
                                                     <button type='submit' class="btn btn-primary">Submit</button>
-                                                    <button type='reset' class="btn btn-success">Reset</button>
+                                                
                                                 </div>
                                             </div>
                                         </div>
@@ -112,6 +100,10 @@
                                 <div id="treeview_json">
                                
                                 </div>
+                              
+                                <div id="list_jabatan" style="margin-top:20px;">
+                               
+                               </div>
                             </div>
                         </div>
                     </div>
@@ -121,13 +113,18 @@
             </div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>    
-   
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 <script type="text/javascript">
 
-    $(function(){
-        // loadJabatan()
-        loadTree()
-    })
+$( document ).ready(function() {
+    $('select').select2();
+     loadTree()
+    //  loadJabatan()
+
+    
+});
+
+  
 
     function loadTree(){
    
@@ -148,10 +145,7 @@
 //         });
         }
 
-  function initTree(treeData) {
-    $('#treeview_json').treeview({data: treeData});
-  }
-    
+
 
 
     
@@ -166,9 +160,7 @@
         })
     }
 
-    $(function () {
-    $("select").select2();
-    });
+   
 
         $('#form_jabatan').on('submit', function(e){
         e.preventDefault();

@@ -14,6 +14,7 @@ class C_Master extends CI_Controller {
 	public function index()
 	{
 		$data['jabatan'] = $this->master->getAllJabatan();
+		$data['parent_jabatan'] = $this->master->getParentJabatan();
 		// dd($data);
 		render('master/V_MasterJabatan','','',$data);
 	}
@@ -26,7 +27,7 @@ class C_Master extends CI_Controller {
 
 	public function createTreeJabatan(){
         $data = $this->input->post();
-        $this->master->insert('tree_jabatan', $data);
+        $this->master->createTreeJabatan();
     }
 
 
@@ -37,7 +38,7 @@ class C_Master extends CI_Controller {
     {
         $data['jabatan'] = $this->master->getItem();
 		$this->load->view('master/V_TreeJabatanItem', $data);
-
+        //  dd($data);
 		//   $data = $this->master->getItem();
         //   echo json_encode(array_values($data));
     }

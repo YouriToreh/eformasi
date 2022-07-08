@@ -31,7 +31,7 @@
 
         <!-- Datatables -->
     
-        <link href="<?=base_url('')?>assets/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="<?=base_url('')?>assets/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
     <link href="<?=base_url('')?>assets/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
     <link href="<?=base_url('')?>assets/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
     <link href="<?=base_url('')?>assets/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
@@ -39,8 +39,8 @@
 
 
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-treeview/1.2.0/bootstrap-treeview.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-treeview/1.2.0/bootstrap-treeview.min.css" />
+  
 
 
 
@@ -172,7 +172,7 @@
     <!-- JQVMap -->
     <script src="<?=base_url('')?>assets/vendors/jqvmap/dist/jquery.vmap.js"></script>
     <script src="<?=base_url('')?>assets/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-    <script src="<?=base_url('')?>assetsvendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <script src="<?=base_url('')?>assets/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
     <!-- bootstrap-daterangepicker -->
     <script src="<?=base_url('')?>assets/vendors/moment/min/moment.min.js"></script>
     <script src="<?=base_url('')?>assets/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
@@ -198,9 +198,7 @@
     <script src="<?=base_url('')?>assets/vendors/pdfmake/build/vfs_fonts.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"></script>
-  <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-treeview/1.2.0/bootstrap-treeview.min.js"></script>
- 
+      <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-treeview/1.2.0/bootstrap-treeview.min.js"></script>
 	
   </body>
 </html>
